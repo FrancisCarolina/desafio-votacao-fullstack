@@ -5,10 +5,24 @@ import Botao from "../Botao";
 
 const Formulario = (props) => {
   const [cpf, setCpf] = useState("");
+  const [erro, setErro] = useState("");
+
+  const aoAlterado = (valor) => {
+    setCpf(valor);
+    if (valor !== "") {
+      setErro("");
+    }
+  };
 
   const aoSalvar = (evento) => {
     evento.preventDefault();
-    setCpf("");
+    if (cpf === "") {
+      setErro("Campo obrigatório");
+    } else {
+      setErro("");
+      //
+      setCpf("");
+    }
   };
 
   return (
@@ -19,8 +33,15 @@ const Formulario = (props) => {
           obrigatorio
           label="CPF"
           valor={cpf}
-          aoAlterado={(valor) => setCpf(valor)}
+          aoAlterado={(valor) => aoAlterado(valor)}
+          onBlur={() => {
+            if (cpf === "") {
+              setErro("Campo obrigatório");
+            }
+          }}
         />
+        {erro && <span className="erro">{erro}</span>}
+        {erro === "" && <span className="erro-escondido">.</span>}
         <Botao>Enviar</Botao>
       </form>
     </section>

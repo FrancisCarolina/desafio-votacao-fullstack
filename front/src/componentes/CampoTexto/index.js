@@ -12,6 +12,7 @@ const CampoTexto = (props) => {
         onChange={aoDigitado}
         required={props.obrigatorio}
         value={props.valor}
+        onBlur={props.onBlur}
       />
     </div>
   );
