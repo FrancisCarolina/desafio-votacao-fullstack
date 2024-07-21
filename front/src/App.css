@@ -1,24 +1,3 @@
 .App {
-  display: flex;
-  box-sizing: border-box;
-  width: 100vw;
   height: 100vh;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-
-.App .campo-texto{
-  display: flex;
-  flex-direction: column;
-}
-
-.App .campo-texto .campo-invalido{
-  color: red;
-}
-
-.App .form{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 }

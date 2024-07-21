@@ -1,0 +1,17 @@
+.campo-texto{
+    margin: 24px 0;
+}
+.campo-texto label{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+.campo-texto input{
+    background-color: #fff;
+    width: 100%;
+    border: none;
+    font-size: 18px;
+    padding: 24px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
