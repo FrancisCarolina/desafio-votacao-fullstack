@@ -42,7 +42,9 @@ const Formulario = (props) => {
         />
         {erro && <span className="erro">{erro}</span>}
         {erro === "" && <span className="erro-escondido">.</span>}
-        <Botao>Enviar</Botao>
+        <div>
+          <Botao>Enviar</Botao>
+        </div>
       </form>
     </section>
   );

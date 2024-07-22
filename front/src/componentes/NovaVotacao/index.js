@@ -66,7 +66,7 @@ const NovaVotacao = (props) => {
         {erroTempo === "" && <span className="erro-escondido">.</span>}
         <ListaRespostas />
         <div>
-          <Botao>Enviar</Botao>
+          <Botao type={"submit"}>Enviar</Botao>
         </div>
       </form>
     </div>

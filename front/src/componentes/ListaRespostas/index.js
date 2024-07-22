@@ -2,6 +2,7 @@ import React from "react";
 import "./ListaRespostas.css";
 
 const ListaRespostas = (props) => {
+  const aoAdicionarRespostas = () => {};
   return (
     <div className="lista-respostas">
       <sapn>Respostas permitidas: </sapn>
@@ -18,6 +19,11 @@ const ListaRespostas = (props) => {
           <input type="checkbox" name="nao sei" disabled checked={false} />
           Não sei
         </label>
+      </div>
+      <div className="botaoLista">
+        <button onClick={aoAdicionarRespostas} disabled>
+          Add Respostas
+        </button>
       </div>
     </div>
   );

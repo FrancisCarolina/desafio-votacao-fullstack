@@ -9,12 +9,27 @@
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 10px;
-    margin-bottom: 14px;
 }
 .lista-respostas label{
     width: 20%;
     margin-bottom: 10px;
 }
+.lista-respostas .botaoLista{
+    display: flex;
+    justify-content: end;
+}
+.botaoLista button{
+    color:#646464;
+    font-weight: 700;
+    background-color: #eaeaea;
+    border:none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-bottom: 14px;
+}
+
 @media (max-width: 850px) {
     .lista-respostas label{
         width: 32%;
