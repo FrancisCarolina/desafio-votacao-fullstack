@@ -14,7 +14,7 @@ const Header = (props) => {
           <Link to="/sobre">Sobre</Link>
         </li>
         <li>
-          <Link to="/contato">Contato</Link>
+          <Link to="/novaVotacao">Abrir Votação</Link>
         </li>
         <li>
           <Link to="/login">Login</Link>

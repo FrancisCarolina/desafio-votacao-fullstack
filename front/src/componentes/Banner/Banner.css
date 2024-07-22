@@ -1,0 +1,48 @@
+.banner {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex: 1;
+    padding: 0 32px;
+}
+
+.banner-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.image-banner {
+    flex: 0 0 50%;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-content h1,
+.banner-content h2,
+.banner-content .botao {
+    margin: 10px 0;
+}
+  
+@media (max-width: 850px) {
+    .banner {
+        flex-direction: column;
+        height: auto; 
+    }
+
+    .banner-content,
+    .image-banner {
+        width: 100%;
+        height: auto;
+    }
+
+    .image-banner {
+        object-fit: cover;
+        height: 200px;
+    }
+}
