@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Formulario from "./componentes/Formulario";
 import Header from "./componentes/Header";
 import Banner from "./componentes/Banner";
+import NovaVotacao from "./componentes/NovaVotacao";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Banner />} />
             <Route path="login" element={<Formulario />} />
+            <Route path="novaVotacao" element={<NovaVotacao />} />
           </Routes>
         </div>
       </BrowserRouter>

@@ -13,6 +13,8 @@ const CampoTexto = (props) => {
         required={props.obrigatorio}
         value={props.valor}
         onBlur={props.onBlur}
+        type={props.type}
+        step={props.step}
       />
     </div>
   );
