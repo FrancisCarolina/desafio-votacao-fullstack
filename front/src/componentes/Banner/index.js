@@ -8,7 +8,11 @@ const Banner = (props) => {
     <section className="banner">
       <div className="banner-content">
         <h1>Inicie sua votação</h1>
-        <h2>Lorem ipsum dolor</h2>
+        <span>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et
+          urna metus.
+        </span>
+
         <Botao>Criar uma Votação</Botao>
       </div>
       <img src={bannerImage} alt="Banner" className="image-banner" />
