@@ -1,0 +1,29 @@
+.votar{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.votar form{
+    display: flex;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    justify-content: center; 
+    flex-direction: column;
+    width: 50%;
+    padding: 36px 64px;
+}
+
+.votar .erro, .erro-escondido{
+    font-size: 12px;
+    margin: 8px 0;
+    margin-bottom: 24px;
+    display: block;
+    color: red
+}
+
+.votar .erro-escondido{
+    color: #f2f2f2
+}
