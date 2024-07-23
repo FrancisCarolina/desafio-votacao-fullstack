@@ -47,7 +47,7 @@ const Tempo = ({ date, tempoDuracao, aoMudarTempo }) => {
   }, [aoMudarTempo, timeLeft]);
 
   return (
-    <div className="tempo">
+    <div className="cronometro">
       <span>Tempo Restante:</span>
       <span>
         {timeLeft.hours}:
