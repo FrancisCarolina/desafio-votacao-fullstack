@@ -28,7 +28,7 @@ const VotarCodigo = (props) => {
   };
 
   return (
-    <div className="votar">
+    <div className="votar-codigo">
       <form onSubmit={aoSubmeter}>
         <h2>Insira o código da votação</h2>
         <CampoTexto

@@ -7,6 +7,7 @@ import Banner from "./componentes/Banner";
 import NovaVotacao from "./componentes/NovaVotacao";
 import MinhasVotacoes from "./componentes/MinhasVotacoes";
 import VotarCodigo from "./componentes/VotarCodigo";
+import Votar from "./componentes/Votar";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="novaVotacao" element={<NovaVotacao />} />
             <Route path="minhasVotacoes" element={<MinhasVotacoes />} />
             <Route path="votar" element={<VotarCodigo />} />
+            <Route path="votar/:id" element={<Votar />} />
           </Routes>
         </div>
       </BrowserRouter>

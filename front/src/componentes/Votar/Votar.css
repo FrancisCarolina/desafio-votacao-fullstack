@@ -1,0 +1,36 @@
+.votar{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #f2f2f2;
+    justify-content: start;
+    align-items: center;
+    padding: 48px;
+}
+
+.votar form{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 70%;
+    border-radius: 10px;
+    padding: 64px;
+    justify-content: center;
+    box-sizing: border-box;
+    gap: 20px
+}
+
+.votar form span{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.votar form .tempo{
+    display: flex;
+    font-size: 16px;
+    color: red;
+    gap: 10px;
+    font-weight: 400;
+    width: 100%;
+    justify-content: flex-end;
+}

@@ -1,0 +1,20 @@
+.campo-selecionar{
+    display: flex;
+    padding: 24px;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    gap: 10px
+}
+
+.primario{
+    background-color: #ffcbcb;
+}
+.secundario{
+    background-color: #fff8cf;
+}
+
+.campo-selecionar input[type="radio" i] {
+    margin: 0;
+}
