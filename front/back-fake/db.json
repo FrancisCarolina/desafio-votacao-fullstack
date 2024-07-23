@@ -55,9 +55,21 @@
       "voto": "sim"
     },
     {
-      "id": 1,
+      "id": 2,
       "idAssociado": 2,
       "idPauta": 1,
+      "voto": "nao"
+    },
+    {
+      "id": 3,
+      "idAssociado": 3,
+      "idPauta": 2,
+      "voto": "sim"
+    },
+    {
+      "id": 4,
+      "idAssociado": 4,
+      "idPauta": 2,
       "voto": "nao"
     }
   ]
