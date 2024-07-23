@@ -18,6 +18,7 @@ const ResultadoVotacao = (props) => {
       <Chart
         chartType="ColumnChart"
         height="400px"
+        width="90%"
         data={data}
         options={options}
       />
