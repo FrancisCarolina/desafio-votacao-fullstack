@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import "./Votar.css";
+import "./VotarCodigo.css";
 import CampoTexto from "../CampoTexto";
 import Botao from "../Botao";
 import { useNavigate } from "react-router-dom";
 
-const Votar = (props) => {
+const VotarCodigo = (props) => {
   const navigate = useNavigate();
   const [codigo, setCodigo] = useState("");
   const [erro, setErro] = useState("");
@@ -52,4 +52,4 @@ const Votar = (props) => {
   );
 };
 
-export default Votar;
+export default VotarCodigo;
