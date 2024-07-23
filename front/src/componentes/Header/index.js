@@ -11,10 +11,10 @@ const Header = (props) => {
       </Link>
       <ul className="nav-links">
         <li>
-          <Link to="/sobre">Sobre</Link>
+          <Link to="/votar">Votar</Link>
         </li>
         <li>
-          <Link to="/novaVotacao">Abrir Votação</Link>
+          <Link to="/minhasVotacoes">Minhas Votacoes</Link>
         </li>
         <li>
           <Link to="/login">Login</Link>

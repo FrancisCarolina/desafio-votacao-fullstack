@@ -5,6 +5,7 @@ import Formulario from "./componentes/Formulario";
 import Header from "./componentes/Header";
 import Banner from "./componentes/Banner";
 import NovaVotacao from "./componentes/NovaVotacao";
+import MinhasVotacoes from "./componentes/MinhasVotacoes";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path="/" element={<Banner />} />
             <Route path="login" element={<Formulario />} />
             <Route path="novaVotacao" element={<NovaVotacao />} />
+            <Route path="minhasVotacoes" element={<MinhasVotacoes />} />
           </Routes>
         </div>
       </BrowserRouter>

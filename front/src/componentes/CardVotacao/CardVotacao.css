@@ -1,0 +1,41 @@
+.card-votacao{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    padding: 20px;
+    width: 25%;
+    background-color: #f7f7f7;
+    cursor: pointer;
+    border: 1px solid #f7f7f7;
+}
+
+.card-votacao:hover{
+    border: 1px solid blueviolet;
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+
+.card-votacao .titulo{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.card-votacao .conteudo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media (max-width: 1040px) {
+    .card-votacao{
+        width: 40%;
+    }
+}
+@media (max-width: 840px) {
+    .card-votacao{
+        width: 80%;
+        justify-content: center;
+    }
+}
