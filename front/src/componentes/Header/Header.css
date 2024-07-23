@@ -24,14 +24,15 @@
     display: inline;
 }
 
-.nav-links a {
+.nav-links a, span{
     text-decoration: none;
     color:#7f7f7f;
     padding: 5px 10px;
     transition: background-color 0.3s;
+    cursor: pointer
 }
 
-.nav-links a:hover {
+.nav-links a:hover, span:hover {
     background-color: #f2f2f2;
     border-radius: 5px;
 }

@@ -2,6 +2,8 @@ import { useState } from "react";
 import "./Formulario.css";
 import CampoTexto from "../CampoTexto";
 import Botao from "../Botao";
+import axios from "axios";
+import { setSessionStorageItem } from "../../utils/sessionUtils";
 
 const Formulario = (props) => {
   const [cpf, setCpf] = useState("");
@@ -14,14 +16,44 @@ const Formulario = (props) => {
     }
   };
 
-  const aoSalvar = (evento) => {
+  const buscarAssociadoPorCpf = async () => {
+    try {
+      const response = await axios.get(
+        `http://localhost:3003/associado?cpf=${cpf}`
+      );
+      const data = response.data;
+      if (data.length > 0) {
+        setSessionStorageItem("associadoLogado", data[0]);
+        return true;
+      } else {
+        return false;
+      }
+    } catch (err) {
+      console.log("Erro GET Associado: ", err);
+      return false;
+    }
+  };
+
+  const aoSalvar = async (evento) => {
     evento.preventDefault();
     if (cpf === "") {
       setErro("Campo obrigatório");
     } else {
       setErro("");
-      //
-      setCpf("");
+
+      const achouAssociado = await buscarAssociadoPorCpf();
+      try {
+        if (!achouAssociado) {
+          const res = await axios.post("http://localhost:3003/associado", {
+            cpf: cpf,
+          });
+          console.log("RESPONSE POST: ", res.data);
+          setSessionStorageItem("associadoLogado", res.data);
+        }
+        setCpf("");
+      } catch (err) {
+        console.log("Erro POST Associado: ", err);
+      }
     }
   };
 

@@ -5,7 +5,7 @@ const ListaRespostas = (props) => {
   const aoAdicionarRespostas = () => {};
   return (
     <div className="lista-respostas">
-      <sapn>Respostas permitidas: </sapn>
+      <span>Respostas permitidas: </span>
       <div className="respostas">
         <label>
           <input type="checkbox" name="sim" checked disabled />

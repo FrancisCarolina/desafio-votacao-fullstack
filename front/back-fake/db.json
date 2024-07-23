@@ -1,0 +1,52 @@
+{
+  "associado": [
+    {
+      "id": 1,
+      "cpf": "123.456.789-00"
+    },
+    {
+      "id": 2,
+      "cpf": "111.222.333-44"
+    },
+    {
+      "cpf": "1234",
+      "id": 3
+    },
+    {
+      "cpf": "54221",
+      "id": 4
+    }
+  ],
+  "pauta": [
+    {
+      "id": 1,
+      "iniciadoEm": "2024-07-23T17:00:00.000Z",
+      "duracao": "00:40:00",
+      "pergunta": "Você gosta de gatos?",
+      "codigo": "abc",
+      "idAssociado": 1
+    },
+    {
+      "id": 2,
+      "iniciadoEm": "2024-07-23T17:00:00.000Z",
+      "duracao": "00:40:00",
+      "pergunta": "Você gosta de cachorros?",
+      "codigo": "dfg",
+      "idAssociado": 2
+    }
+  ],
+  "votos": [
+    {
+      "id": 1,
+      "idAssociado": 1,
+      "idPauta": 2,
+      "voto": "sim"
+    },
+    {
+      "id": 1,
+      "idAssociado": 2,
+      "idPauta": 1,
+      "voto": "nao"
+    }
+  ]
+}

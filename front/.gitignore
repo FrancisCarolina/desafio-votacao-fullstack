@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/back-fake/node_modules
 /.pnp
 .pnp.js
 
