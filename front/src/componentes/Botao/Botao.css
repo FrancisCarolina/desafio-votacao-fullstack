@@ -12,3 +12,10 @@
 .botao:hover{
     background-color: #3c57f3
 }
+
+.botao:disabled,
+.botao.disabled {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}

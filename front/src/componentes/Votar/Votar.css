@@ -24,13 +24,3 @@
     font-size: 18px;
     font-weight: 700;
 }
-
-.votar form .tempo{
-    display: flex;
-    font-size: 16px;
-    color: red;
-    gap: 10px;
-    font-weight: 400;
-    width: 100%;
-    justify-content: flex-end;
-}
