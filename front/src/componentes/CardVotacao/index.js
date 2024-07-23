@@ -3,7 +3,7 @@ import "./CardVotacao.css";
 
 const CardVotacao = (props) => {
   return (
-    <section className="card-votacao">
+    <section className="card-votacao" onClick={props.onClick}>
       <span className="titulo">{props.pauta}</span>
       <div className="conteudo">
         <div className="tempo">

@@ -1,0 +1,13 @@
+.resultado-votacao {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding: 64px;
+    box-sizing: border-box;
+}
+
+.resultado-votacao span{
+    font-size: 18px;
+    font-weight: 700;
+}

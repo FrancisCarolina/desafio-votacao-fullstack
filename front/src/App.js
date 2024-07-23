@@ -8,6 +8,7 @@ import NovaVotacao from "./componentes/NovaVotacao";
 import MinhasVotacoes from "./componentes/MinhasVotacoes";
 import VotarCodigo from "./componentes/VotarCodigo";
 import Votar from "./componentes/Votar";
+import ResultadoVotacao from "./componentes/ResultadoVotacao";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="login" element={<Formulario />} />
             <Route path="novaVotacao" element={<NovaVotacao />} />
             <Route path="minhasVotacoes" element={<MinhasVotacoes />} />
+            <Route path="minhasVotacoes/:id" element={<ResultadoVotacao />} />
             <Route path="votar" element={<VotarCodigo />} />
             <Route path="votar/:id" element={<Votar />} />
           </Routes>

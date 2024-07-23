@@ -26,6 +26,9 @@ const MinhasVotacoes = () => {
             pauta={votacao.pauta}
             duracao={votacao.duracao}
             iniciada={votacao.iniciada}
+            onClick={() => {
+              navigate(`/minhasVotacoes/${votacao.id}`);
+            }}
           />
         ))}
       </div>
