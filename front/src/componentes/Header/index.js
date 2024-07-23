@@ -26,10 +26,18 @@ const Header = () => {
       </Link>
       <ul className="nav-links">
         <li>
-          <Link to="/votar">Votar</Link>
+          {associadoLogado ? (
+            <Link to="/votar">Votar</Link>
+          ) : (
+            <Link to="/login">Votar</Link>
+          )}
         </li>
         <li>
-          <Link to="/minhasVotacoes">Minhas Votacoes</Link>
+          {associadoLogado ? (
+            <Link to="/minhasVotacoes">Minhas Votacoes</Link>
+          ) : (
+            <Link to="/login">Minhas Votacoes</Link>
+          )}
         </li>
         <li>
           {associadoLogado ? (
