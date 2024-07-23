@@ -49,7 +49,7 @@ const Formulario = () => {
       );
       const data = response.data;
       if (data.length > 0) {
-        setSessionStorageItem("associadoLogado", data[0]);
+        setSessionStorageItem("associadoLogado", data[0].id);
         return true;
       } else {
         return false;
@@ -77,7 +77,7 @@ const Formulario = () => {
             cpf: cpf,
           });
           console.log("RESPONSE POST: ", res.data);
-          setSessionStorageItem("associadoLogado", res.data);
+          setSessionStorageItem("associadoLogado", res.data.id);
         }
         setCpf("");
         setTextoModal("A operação foi concluída com sucesso.");

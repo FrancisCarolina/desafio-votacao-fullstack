@@ -35,7 +35,7 @@ const MinhasVotacoes = () => {
   };
 
   useEffect(() => {
-    const idAssociado = 1;
+    const idAssociado = +sessionStorage.getItem("associadoLogado");
     const buscarPautasPorAssociado = async () => {
       setLoading(true);
       try {
