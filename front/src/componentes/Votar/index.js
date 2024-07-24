@@ -27,8 +27,7 @@ const Votar = (props) => {
   const handleCloseModal = () => {
     setShowModal(false);
     if (
-      textoModal ===
-        "Não foi possível encontrar uma votação com esse código!" ||
+      textoModal === "Não foi possível encontrar uma votação com esse código" ||
       tituloModal === "Sucesso!" ||
       tituloModal === "Atenção!"
     ) {
