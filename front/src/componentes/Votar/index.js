@@ -26,7 +26,12 @@ const Votar = (props) => {
 
   const handleCloseModal = () => {
     setShowModal(false);
-    if (tituloModal === "Falha!") {
+    if (
+      textoModal ===
+        "Não foi possível encontrar uma votação com esse código!" ||
+      tituloModal === "Sucesso!" ||
+      tituloModal === "Atenção!"
+    ) {
       navigate("/votar");
     }
   };
@@ -35,8 +40,29 @@ const Votar = (props) => {
     setSelecionado(valor);
   };
 
+  const enviarVoto = async () => {
+    try {
+      const res = await axios.post("http://localhost:3003/votos", {
+        idAssociado: +sessionStorage.getItem("associadoLogado"),
+        idPauta: pauta.id,
+        voto: selecionado,
+      });
+      console.log("RESPONSE POST: ", res.data);
+      setTextoModal("A operação foi concluída com sucesso.");
+      setTituloModal("Sucesso!");
+    } catch (err) {
+      console.log("Erro POST votos: ", err);
+      setTextoModal("Não foi possível enviar seu voto");
+      setTituloModal("Falha!");
+    }
+    handleOpenModal();
+  };
+
   const aoSubmeter = (evento) => {
     evento.preventDefault();
+    if (selecionado !== "") {
+      enviarVoto();
+    }
   };
 
   const aoMudarTempo = (tempoRestante) => {
@@ -60,21 +86,48 @@ const Votar = (props) => {
         );
         const data = response.data;
         if (data.length > 0) {
-          console.log("PAUTA: ", data[0]);
           setPauta(data[0]);
         }
       } catch (err) {
-        console.log("Erro GET Associado: ", err);
+        console.log("Erro GET pauta: ", err);
         setTextoModal("Não foi possível encontrar uma votação com esse código");
         setTituloModal("Falha!");
         handleOpenModal();
+        setLoading(false);
       }
-      setLoading(false);
     };
     if (id) {
       buscarPautaPorId(id);
     }
   }, [id]);
+
+  useEffect(() => {
+    const validarJaVotado = async () => {
+      try {
+        const response = await axios.get(
+          `http://localhost:3003/votos?idPauta=${
+            pauta.id
+          }&idAssociado=${+sessionStorage.getItem("associadoLogado")}`
+        );
+        const data = response.data;
+        if (data.length > 0) {
+          setTextoModal(
+            "Você já deu seu voto nessa pauta! Seu voto foi '" +
+              data[0].voto +
+              "'"
+          );
+          setTituloModal("Atenção!");
+          handleOpenModal();
+        }
+      } catch (err) {
+        console.log("Erro GET votos: ", err);
+      }
+      setLoading(false);
+    };
+    if (pauta) {
+      validarJaVotado();
+    }
+  }, [pauta]);
 
   return (
     <div className="votar">

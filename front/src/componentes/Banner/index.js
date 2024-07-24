@@ -4,11 +4,15 @@ import bannerImage from "../../assets/banner.png";
 import Botao from "../Botao";
 import { useNavigate } from "react-router-dom";
 
-const Banner = (props) => {
+const Banner = () => {
   const navigate = useNavigate();
 
   const aoClicar = () => {
-    navigate("/novaVotacao");
+    if (sessionStorage.getItem("associadoLogado")) {
+      navigate("/novaVotacao");
+    } else {
+      navigate("/login");
+    }
   };
 
   return (
