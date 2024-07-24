@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import Loader from "../Loader";
 import axios from "axios";
 import Modal from "../Modal";
+import Tempo from "../Tempo";
 
 const ResultadoVotacao = (props) => {
   const { id } = useParams();
@@ -15,6 +16,7 @@ const ResultadoVotacao = (props) => {
   const [textoModal, setTextoModal] = useState("");
   const [tituloModal, setTituloModal] = useState("");
   const [pauta, setPauta] = useState();
+  const [tempoAcabou, setTempoAcabou] = useState(false);
 
   const handleOpenModal = () => {
     setShowModal(true);
@@ -34,6 +36,18 @@ const ResultadoVotacao = (props) => {
     vAxis: {
       format: "0",
     },
+  };
+
+  const aoMudarTempo = (tempoRestante) => {
+    if (
+      tempoRestante.hours === 0 &&
+      tempoRestante.minutes === 0 &&
+      tempoRestante.seconds === 0
+    ) {
+      setTempoAcabou(true);
+    } else {
+      setTempoAcabou(false);
+    }
   };
 
   useEffect(() => {
@@ -110,6 +124,19 @@ const ResultadoVotacao = (props) => {
           options={options}
         />
       )}
+      {!!pauta && !!pauta.codigo && (
+        <div className="codigo">
+          Código: <div>{pauta.codigo}</div>
+        </div>
+      )}
+      {!!pauta && !!pauta.iniciadoEm && !!pauta.duracao && !tempoAcabou && (
+        <Tempo
+          date={pauta.iniciadoEm}
+          tempoDuracao={pauta.duracao}
+          aoMudarTempo={(tempoRestante) => aoMudarTempo(tempoRestante)}
+        />
+      )}
+      {!!tempoAcabou && <div className="tempo-esgotado">Tempo esgotado</div>}
     </div>
   );
 };

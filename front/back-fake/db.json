@@ -21,6 +21,14 @@
       "codigo": "MDM3ZTZhMDk4YTlm",
       "idAssociado": 1,
       "id": 1
+    },
+    {
+      "iniciadoEm": "2024-07-24T12:41:17.829Z",
+      "duracao": "01:05:00",
+      "pergunta": "Você gosta de cachorros?",
+      "codigo": "MDIyYTUwOWFlOGNi",
+      "idAssociado": 1,
+      "id": 2
     }
   ],
   "votos": [
@@ -41,6 +49,12 @@
       "idPauta": 1,
       "voto": "sim",
       "id": 3
+    },
+    {
+      "idAssociado": 1,
+      "idPauta": 2,
+      "voto": "nao",
+      "id": 4
     }
   ]
 }
