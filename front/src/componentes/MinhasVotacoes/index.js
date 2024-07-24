@@ -40,7 +40,7 @@ const MinhasVotacoes = () => {
       setLoading(true);
       try {
         const response = await axios.get(
-          `http://localhost:3003/pauta?idAssociado=${idAssociado}`
+          `http://localhost:8080/pauta?idAssociado=${idAssociado}`
         );
         const data = response.data;
         if (data.length > 0) {

@@ -45,7 +45,7 @@ const Formulario = () => {
   const buscarAssociadoPorCpf = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3003/associado?cpf=${cpf}`
+        `http://localhost:8080/associado?cpf=${cpf}`
       );
       const data = response.data;
       if (data.length > 0) {
@@ -73,7 +73,7 @@ const Formulario = () => {
       const achouAssociado = await buscarAssociadoPorCpf();
       try {
         if (!achouAssociado) {
-          const res = await axios.post("http://localhost:3003/associado", {
+          const res = await axios.post("http://localhost:8080/associado", {
             cpf: cpf,
           });
           console.log("RESPONSE POST: ", res.data);

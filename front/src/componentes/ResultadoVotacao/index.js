@@ -55,7 +55,7 @@ const ResultadoVotacao = (props) => {
       setLoading(true);
       try {
         const response = await axios.get(
-          `http://localhost:3003/pauta?id=${id}`
+          `http://localhost:8080/pauta?id=${id}`
         );
         const data = response.data;
         if (data.length > 0) {
@@ -72,7 +72,7 @@ const ResultadoVotacao = (props) => {
     const buscarResultadosPorVotacao = async (id) => {
       try {
         const response = await axios.get(
-          `http://localhost:3003/votos?idPauta=${id}`
+          `http://localhost:8080/votos?idPauta=${id}`
         );
         const data = response.data;
         if (data.length > 0) {

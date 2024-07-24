@@ -42,9 +42,9 @@ const Votar = (props) => {
 
   const enviarVoto = async () => {
     try {
-      const res = await axios.post("http://localhost:3003/votos", {
-        idAssociado: +sessionStorage.getItem("associadoLogado"),
-        idPauta: pauta.id,
+      const res = await axios.post("http://localhost:8080/votos", {
+        id_associado: +sessionStorage.getItem("associadoLogado"),
+        id_pauta: pauta.id,
         voto: selecionado,
       });
       console.log("RESPONSE POST: ", res.data);
@@ -82,7 +82,7 @@ const Votar = (props) => {
       setLoading(true);
       try {
         const response = await axios.get(
-          `http://localhost:3003/pauta?codigo=${id}`
+          `http://localhost:8080/pauta?codigo=${id}`
         );
         const data = response.data;
         if (data.length > 0) {
@@ -105,7 +105,7 @@ const Votar = (props) => {
     const validarJaVotado = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3003/votos?idPauta=${
+          `http://localhost:8080/votos?idPauta=${
             pauta.id
           }&idAssociado=${+sessionStorage.getItem("associadoLogado")}`
         );

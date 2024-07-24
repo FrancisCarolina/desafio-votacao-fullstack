@@ -58,12 +58,12 @@ const NovaVotacao = (props) => {
     } else {
       try {
         const date = new Date();
-        const res = await axios.post("http://localhost:3003/pauta", {
+        const res = await axios.post("http://localhost:8080/pauta", {
           iniciadoEm: date.toISOString(),
           duracao: tempo,
           pergunta: pauta,
           codigo: geradorCodigo(),
-          idAssociado: +sessionStorage.getItem("associadoLogado"),
+          id_associado: +sessionStorage.getItem("associadoLogado"),
         });
 
         setPauta("");
