@@ -1,94 +1,46 @@
 {
   "associado": [
     {
-      "id": 1,
-      "cpf": "123.456.789-00"
+      "cpf": "123",
+      "id": 1
     },
     {
-      "id": 2,
-      "cpf": "111.222.333-44"
+      "cpf": "234",
+      "id": 2
     },
     {
-      "cpf": "1234",
+      "cpf": "345",
       "id": 3
-    },
-    {
-      "cpf": "54221",
-      "id": 4
-    },
-    {
-      "cpf": "000000000",
-      "id": 5
-    },
-    {
-      "cpf": "756586586",
-      "id": 6
-    },
-    {
-      "cpf": "087645325346",
-      "id": 7
     }
   ],
   "pauta": [
     {
-      "id": 1,
-      "iniciadoEm": "2024-07-24T00:00:00.000Z",
-      "duracao": "00:40:00",
+      "iniciadoEm": "2024-07-24T00:38:10.233Z",
+      "duracao": "01:00:00",
       "pergunta": "Você gosta de gatos?",
-      "codigo": "abc",
-      "idAssociado": 1
-    },
-    {
-      "id": 2,
-      "iniciadoEm": "2024-07-23T17:00:00.000Z",
-      "duracao": "00:40:00",
-      "pergunta": "Você gosta de cachorros?",
-      "codigo": "dfg",
-      "idAssociado": 2
+      "codigo": "MDM3ZTZhMDk4YTlm",
+      "idAssociado": 1,
+      "id": 1
     }
   ],
   "votos": [
     {
-      "id": 1,
       "idAssociado": 1,
-      "idPauta": 2,
-      "voto": "sim"
+      "idPauta": 1,
+      "voto": "sim",
+      "id": 1
     },
     {
-      "id": 2,
       "idAssociado": 2,
       "idPauta": 1,
-      "voto": "nao"
+      "voto": "nao",
+      "id": 2
     },
     {
-      "id": 3,
       "idAssociado": 3,
-      "idPauta": 2,
-      "voto": "sim"
-    },
-    {
-      "id": 4,
-      "idAssociado": 4,
-      "idPauta": 2,
-      "voto": "nao"
-    },
-    {
-      "idAssociado": 2,
       "idPauta": 1,
       "voto": "sim",
-      "id": 5
-    },
-    {
-      "idAssociado": 2,
-      "idPauta": 1,
-      "voto": "sim",
-      "id": 6
-    },
-    {
-      "idAssociado": 2,
-      "idPauta": 1,
-      "voto": "sim",
-      "id": 7
+      "id": 3
     }
   ]
 }
