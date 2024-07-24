@@ -1,0 +1,24 @@
+FRONT
+
+entre na pasta front 
+instale as dependencias do projeto (npm i)
+inicie o projeto (npm start)
+
+
+BACK
+
+para iniciar o projeto corretamente é preciso ter o MySQL
+criar um novo schema chamado "votacao_sicredi_api"
+colocar o user e a senha do seu MySQL em back/api/src/main/resources/application.properties
+    no campo chamado de username e password
+    definido como padrao root como username e senha
+    caso o seu seja igual não é necessário fazer a alteração
+entrar em back/api/src/main/java/vot/sicr/api/ApiApplication.java 
+clicar em Run ApiApplication (botao de play verde)
+
+
+POSTMAN
+
+é possível também testar as APIs pelo POSTMAN
+para fazer isso baixe o arquivo da Collection na raiz do projeto
+clique em "Import" e coloque a Collection baixada
