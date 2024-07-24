@@ -48,19 +48,23 @@ const NovaVotacao = (props) => {
 
   const aoSalvar = async (evento) => {
     evento.preventDefault();
-    if (tempo === "00:00:00" || tempo === "--:--:--" || pauta === "") {
+    if (tempo === "--:--:--" || pauta === "") {
       if (pauta === "") {
         setErroPauta("Campo obrigatório");
       }
-      if (tempo === "00:00:00" || tempo === "--:--:--") {
+      if (tempo === "--:--:--") {
         setErroTempo("Campo obrigatório");
       }
     } else {
       try {
+        let tempoDefault = tempo;
+        if (tempo === "00:00:00") {
+          tempoDefault = "00:01:00";
+        }
         const date = new Date();
         const res = await axios.post("http://localhost:8080/pauta", {
           iniciadoEm: date.toISOString(),
-          duracao: tempo,
+          duracao: tempoDefault,
           pergunta: pauta,
           codigo: geradorCodigo(),
           id_associado: +sessionStorage.getItem("associadoLogado"),
